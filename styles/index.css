@@ -1,0 +1,420 @@
+@charset "utf-8";
+
+/* ============================= */
+/*            Global             */
+/* ============================= */
+
+body {
+    line-height: 1;
+    background-image: url('icepeak.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ============================= */
+/*         header                */
+/* ============================= */
+
+header {
+    background-color: rgba(72, 152, 206, 0.8); 
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #f0f8ff;
+}
+
+header h2 {
+    font-size: 2rem;
+    color: #c0e7ff;
+}
+
+header p {
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+header img { /* image du logo présente dans le header */
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 14%;
+    height: auto;
+    margin: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================= */
+/*         Sections              */
+/* ============================= */
+
+html #accueil{
+    padding: 20px;   
+    border-radius: 10px;    
+    margin: 10px auto;
+    max-width: 800px;
+}
+
+main h2 {
+    color: white;
+    font-size: 1.8rem;
+}
+
+section {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Colonnes flexibles */
+    gap: 10px; 
+    padding: 10px; 
+}
+
+/* Partie du css de la page accueil */
+
+article {
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 800px;
+}
+
+article h2 {
+    color: #c0e7ff;
+}
+
+article p {
+    margin-bottom: 15px;
+}
+
+/* Vidéo dans l'accueil */
+
+.video-container {
+    position: relative;
+    width: 60%; 
+    max-width: 600px; 
+    padding-top: 56.25%; 
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+
+
+/* ======================================= */
+/*     conteneur pour les activités        */
+
+
+.descente, .VTT, .ski, .leVillage, .roller, .Altitude, .Chaletreux, .glacier, .chalet, .igloo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: white; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: flex-start; 
+    align-items: normal; 
+    width: 600px; 
+    min-height: 400px; 
+    margin: 10px; 
+    padding: 0;
+}
+
+
+.descente:hover, .VTT:hover, .ski:hover, .leVillage:hover, .roller:hover, .Altitude:hover, .Chaletreux:hover, .glacier:hover, .chalet:hover, .igloo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Images des conteneurs*/
+.descente img, .VTT img, .roller img, .ski img, .leVillage img, .Altitude img, .Chaletreux img, .glacier img, .chalet img, .igloo img{
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 8px 8px 0 0; 
+    transition: opacity 0.3s ease;
+}
+
+/* Texte caché au départ */
+.descente article, .VTT article, .roller article, .ski article, .leVillage article, .Altitude article, .Chaletreux article, .glacier article, .chalet article,
+.igloo article {
+    width: 95%; 
+    height: 100%; 
+    padding: 10px 15px;
+    text-overflow: inherit;
+    margin: 0;
+    text-align: justify;
+    color: white;
+    font-size: 14px; 
+    line-height: 1.3; 
+    background-color: #000000; 
+    opacity: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3; 
+}
+
+/* Au survol, texte remplace image */
+.descente:hover img, .VTT:hover img, .roller:hover img, .ski:hover img, .leVillage:hover img, .Altitude:hover img, .Chaletreux:hover img, .glacier:hover img, .chalet:hover img, 
+.igloo:hover img{
+    opacity: 25%;
+}
+
+.descente:hover article, .VTT:hover article, .roller:hover article, .ski:hover article, .leVillage:hover article, .Altitude:hover article, .Chaletreux:hover article, .glacier:hover article, .chalet:hover article, 
+.igloo:hover article {
+    opacity: 75%;
+}
+
+/* Titre des conteneurs */
+.descente h3, .VTT h3, .roller h3, .ski h3, .leVillage h3, .Altitude h3, .Chaletreux h3, .glacier h3, .chalet h3, .igloo h3 {
+    width: 100%; 
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    border-radius: 8px 8px 0 0; 
+    z-index:2;
+}
+
+/* ================================= */
+/*   CSS pour le tableau tarifs      */
+
+
+#tarifs {
+    margin: 1rem 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius: 8px;
+}
+
+#tarifs table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: left;
+    background-color: hwb(0 73% 25%);
+    border: 1px solid #ddd;
+}
+
+#tarifs th {
+    background-color: rgba(72, 152, 206, 0.8); 
+    color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#tarifs td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#tarifs tr:nth-child(even) {
+    background-color: #dad7d7;
+}
+
+#tarifs tr:hover {
+    background-color: rgba(72, 152, 206, 0.6);
+}
+
+#tarifs p { /* Explication à coté du tableau */
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* ============================= */
+/*   CSS pour le formulaire      */
+
+section#Formulaire {
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+form {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: rgba(72, 152, 206, 0.6);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: lemonchiffon ;
+    font-weight: bold;
+}
+
+input, select, button {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.price-display {
+    font-weight: bold;
+    color: lightgrey;
+    padding: 1rem;
+}
+
+/* ============================= */
+/*        Navigation             */
+/* ============================= */
+
+aside nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin: 2rem;
+    gap: 10px;
+}
+
+aside nav ul a {
+    text-decoration: none;
+    text-align: center;
+    color: #f0f8ff;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+    width : 22%;
+    font-size: 1.6rem;
+    border-radius: 1rem;
+    background-color: black;
+    opacity: 70%;
+}
+
+aside nav ul a:hover {
+    color: #0066cc;
+    box-shadow: 2px 2px 10px black;
+}
+
+/* ============================= */
+/*        Footer                 */
+/* ============================= */
+
+footer {
+    background-color: rgba(72, 152, 206, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px ;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer address {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+footer img {
+    position: relative;
+    left: 2px;
+    top: 2px;
+    width: 9%;
+    height: auto;
+    margin: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    
+}
+
+footer address p:first-child {
+    margin: 0 auto; 
+    text-align: center;
+    flex: 1;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+footer a:hover {
+    background-color: #0056b3; 
+}
+
+footer address p:nth-child(2) {
+    margin-left: auto;
+    text-align: right;
+    display: inline-block;
+}
+
+/* =================================== */
+/*     pour les réseaux sociaux        */
+/*                                     */
+/* =================================== */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.social-links img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="icon" type="image/jpg" href="./images/logo.jpg"/>
+        <title>Ice Peak Park</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Ice Peak Park</h1>
+            <h2>Contact</h2>
+            <p>L’aventure magique, au sommet des émotions !</p>
+            <img id="logo-image" src="./images/logo.jpg" alt="ice">
+        </header>
+
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="./activites.html">Activités</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#NoteEtReferences">Note et Références</a></li>
+                    <li><a href="#Formulaire">Réserver vos places</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <section id="information">
+                <article>
+                    <h2>Contact </h2>
+                    <ul>
+                        <li>Adresse : Route de Servoz, Passy, 74190</li>
+                        <li>Téléphone : 0579 67 3421 (appel non surtaxé) </li>
+                        <li>Mail : IcePeakPark@hotmail.fr</li>
+                    </ul>
+
+                    <h2>Suivez-nous sur les réseaux sociaux</h2>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                            <img src="images/youtube.png" alt="YouTube">
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                            <img src="images/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                            <img src="images/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://www.tiktok.com" target="_blank" title="TikTok">
+                            <img src="images/tik-tok.png" alt="TikTok">
+                        </a>
+                        <a href="https://www.X.com" target="_blank" title="X-ex Twitter">
+                            <img src="images/twitter.png" alt="X-ex Twitter">
+                        </a>
+                    </div>
+                    
+
+                        
+                    
+                    <h2> Période d'ouverture du parc</h2>
+                        <ul>
+                            <li> Du 15 Aout ou 30 Mai </li>
+                        </ul>
+                    <h2> Horaire d'ouverture du parc</h2>
+                        <ul>
+                            <li> Lundi : 9h00 à 21h00</li>
+                            <li> Mardi : 9h00 à 21h00</li>
+                            <li> Mercredi : 9h00 à 21h00</li>
+                            <li> Jeudi : 9h00 à 21h00</li>
+                            <li> Vendredi : 9h00 à 23h00</li>
+                            <li> Samedi : 8h00 à 23h00</li>
+                            <li> Dimanche : 8h00 à 21h00</li>
+                        </ul>
+                </article>
+
+
+                <div style="width: 80%">
+                    <iframe width="100%" height="600" frameborder="0" scrolling="no" 
+                    marginheight="0" marginwidth="0" 
+                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Route%20de%20Servoz,%20Passy,%2074190+(Ice%20Peak%20Park)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                    <a href="https://www.gps.ie/">gps trackers</a>
+                    </iframe>
+                </div>
+            </section>
+
+            <!-- Partie pour la réservation -->
+            <h2> Tableau explicatifs des tarifs</h2>
+            <section id="tarifs">
+                <h3> Selon les catégories d'âge</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Catégorie d'âge</th>
+                            <th>Tranche d'âge</th>
+                            <th>Tarif par jour (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Junior</td>
+                            <td>- de 12 ans</td>
+                            <td>10€</td>
+                        </tr>
+                        <tr>
+                            <td>Jeunes</td>
+                            <td>12 à 17 ans</td>
+                            <td>15€</td>
+                        </tr>
+                        <tr>
+                            <td>Adulte</td>
+                            <td>18 ans et +</td>
+                            <td>20€</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Note : Un supplément de 50€ par réservation s'applique si vous optez pour l'accès aux hébergements.</p>
+            </section>
+
+            <h2> Réserver vos places </h2>
+            <section id="Formulaire">
+                <h3> Sélectionnez vos places</h3>
+                <form id="reservation-form" method="POST">
+                    <!-- Champ Nombre de Réservations -->
+                    <label for="nombre_reservations">Nombre de Réservations :</label>
+                    <input type="number" id="nombre_reservations" name="nombre_reservations" min="1" max="10" required>
+
+                    <!-- Champ Nombre de Jours -->
+                    <label for="nombre_jours">Choisissez le nombre de jours (1 à 5) :</label>
+                    <select id="nombre_jours" name="nombre_jours" required>
+                        <option value="" selected disabled>Veuillez choisir</option>
+                        <option value="1">1 jour</option>
+                        <option value="2">2 jours</option>
+                        <option value="3">3 jours</option>
+                        <option value="4">4 jours</option>
+                        <option value="5">5 jours</option>
+                    </select>
+
+                    <!-- Hébergement -->
+                    <label for="hebergement">Souhaitez-vous accéder aux hébergements du parc ?</label>
+                    <select id="hebergement" name="hebergement" required>
+                        <option value="" selected disabled>Veuillez choisir</option>
+                        <option value="oui">Oui</option>
+                        <option value="non">Non</option>
+                    </select>
+
+                    <!-- Section Âges -->
+                    <div id="age-section"></div>
+
+                    <!-- Bouton Calcul -->
+                    <button type="button" id="calculer-prix">Calculer le Prix</button>
+
+                    <!-- Section Prix Total -->
+                    <div class="price-display" id="prix-total">
+                        Prix total : <span>0€</span>
+                    </div>
+
+                    <button type="submit" id="reserver-billets" disabled> Confirmer votre sélection</button>
+                </form>
+            </section>
+        </main>
+
+        <footer id="NoteEtReferences">
+            <p> All rights reservated to Noahn de LACROIX, Yanis PRIME et Yao BOYU, groupe projet 1I 4</p>
+            <address>
+                <p> 
+                    <a href="http://www.iut-orsay.fr" > Iut d'Orsay Université Paris Saclay </a>
+                </p>
+                <p>
+                    Téléchargez notre rapport :
+                    <a href="./rapport/Rapport_Groupe_i4.docx" download="rapport.docx">Rapport.docx</a> |
+                    <a href="./rapport/Rapport_Groupe_i4.pdf" download="rapport.pdf">rapport.pdf</a>
+                </p>
+            </address>
+            <img id="iut-logo" src="./images/iut.jpg" alt="iut-orsay"> 
+        </footer>
+        <!-- Script permettant de -->
+        <script> 
+            const form = document.getElementById('reservation-form');
+            const ageSection = document.getElementById('age-section');
+            const prixTotalDisplay = document.querySelector('#prix-total span');
+            const btnCalculer = document.getElementById('calculer-prix');
+            const btnReserver = document.getElementById('reserver-billets');
+            const prixParAge = { junior: 10, jeunes: 15, adulte: 20 }; // Tarif par âge
+
+            // Génère les champs d'âge en fonction du nombre de réservations
+            form['nombre_reservations'].addEventListener('input', () => {
+                const nombreReservations = parseInt(form['nombre_reservations'].value, 10);
+                ageSection.innerHTML = ''; // Réinitialiser les champs
+
+                if (!isNaN(nombreReservations)) {
+                    for (let i = 1; i <= nombreReservations; i++) {
+                        const ageLabel = document.createElement('label');
+                        ageLabel.textContent = `Âge de la personne ${i} :`;
+
+                        const ageInput = document.createElement('input');
+                        ageInput.type = 'number';
+                        ageInput.min = '0';
+                        ageInput.required = true;
+                        ageInput.name = `age_personne_${i}`;
+
+                        ageSection.appendChild(ageLabel);
+                        ageSection.appendChild(ageInput);
+                    }
+                }
+            });
+
+            // Calcul du prix total
+            btnCalculer.addEventListener('click', () => {
+                const nombreReservations = parseInt(form['nombre_reservations'].value, 10);
+                const nombreJours = parseInt(form['nombre_jours'].value, 10);
+                const hebergement = form['hebergement'].value === 'oui' ? 50 : 0; // Prix fixe pour l'hébergement
+
+                let prixTotal = 0;
+
+                for (let i = 1; i <= nombreReservations; i++) {
+                    const age = parseInt(form[`age_personne_${i}`]?.value, 10);
+
+                    if (!isNaN(age)) {
+                        if (age < 12) {
+                            prixTotal += prixParAge.junior;
+                        } else if (age < 18) {
+                            prixTotal += prixParAge.jeunes;
+                        } else {
+                            prixTotal += prixParAge.adulte;
+                        }
+                    }
+                }
+
+                // Ajout des frais pour la durée du séjour et l'hébergement
+                prixTotal = prixTotal * nombreJours + hebergement;
+
+                // Afficher le prix
+                prixTotalDisplay.textContent = `${prixTotal}€`;
+
+                // activer le bouton réserver
+                btnReserver.disabled = false
+            });
+
+            // gestion de la réservation
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                alert('Merci pour votre réservation');
+            });
+        </script>
+    </body>
+</html>
